@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sorter</title>
+</head>
+<body>
+<h1 style="text-align: center;">JAVASCRIPT ARRAY SORTER</h1>
+<p style="text-align: center;">Click On any of the created buttons below to sort out your array.</p>
+<div style="text-align: center;">
+<button onclick="ascending()">Ascending Order</button>
+<button onclick="descending()">Descending Order</button>
+<p id="result"></p>
+</div>
+
+<script>
+var points = [10,3,4,21,50,200];
+document.getElementById("result").innerHTML = points;
+
+function ascending(){
+    points.sort(function(a, b) {return a - b});
+    document.getElementById("result").innerHTML = points;
+}
+function descending(){
+    points.sort(function(a, b) {return b - a});
+    document.getElementById("result").innerHTML = points;
+}
+</script>
+</body>
+</html>
